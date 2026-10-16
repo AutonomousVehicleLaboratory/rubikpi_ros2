@@ -1,0 +1,37 @@
+
+ubuntu@ubuntu:~$ sudo nmcli dev wifi connect "Lejun’s iPhone" password "helpmepls"
+
+ls /dev/cu.*
+
+ubuntu@ubuntu:~$ hostname -I
+Get ipv6 on ubuntu bot: ip -6 addr show wlan0 | grep fe80
+ssh ubuntu@fe80: <ipv6 addr>
+fe80::8cfe:22f7:6698:e0eb%en0
+
+exit tmux: ctrl-b, d
+
+cd ~/ros2_ws                 
+colcon build --packages-select robot_control
+source install/setup.bash
+
+ros2 run ros2_ws keyboard_control
+
+python3 -c "
+import serial, time
+s = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+s.write(b'{\"T\":1,\"L\":0.33,\"R\":0.42}\n'); time.sleep(2)
+s.write(b'{\"T\":1,\"L\":0,\"R\":0}\n')
+print(s.read(300))"
+
+	(1 meter, not much drift)
+
+python3 -c "
+import serial, time
+s = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
+s.write(b’{\”T\”:1,\”L\”:-0.1,\”R\”:0.1}\n’); time.sleep(2)
+s.write(b'{\"T\":1,\"L\":0,\"R\":0}\n')
+print(s.read(300))"
+
+
+
+python3 -c " import serial, time s = serial.Serial('/dev/ttyUSB0', 115200, timeout=1) s.write(b’{\”T\”:1,\”L\”:0.15,\”R\”:0.2}\n’); time.sleep(2) s.write(b'{\"T\":1,\"L\":0,\"R\":0}\n') print(s.read(300))"

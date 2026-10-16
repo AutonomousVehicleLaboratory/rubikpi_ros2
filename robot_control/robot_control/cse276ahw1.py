@@ -32,13 +32,21 @@ LEG_1 = [
 
 # ---------- Leg 2: (1, 0, 0) -> (1, 1, 1.57) ----------
 LEG_2 = [
+<<<<<<< HEAD
     (-0.20, 0.21, 2.0),      # turn left 90 deg
+=======
+    (-0.20, 0.20, 2.0),      # turn left 90 deg
+>>>>>>> 2bf71b513f409506dcb1415681831760c221b9c6
     (0.31, 0.40, 2.0),     # forward 1 m
 ]
 
 # ---------- Leg 3: (1, 1, 1.57) -> (2, 1, 0) ----------
 LEG_3 = [
+<<<<<<< HEAD
     (0.20, -0.21, 2.0),      # turn right 90 deg
+=======
+    (0.2, -0.21, 2.0),      # turn right 90 deg
+>>>>>>> 2bf71b513f409506dcb1415681831760c221b9c6
     (0.32, 0.41, 2.0),     # forward 1 m
 ]
 
@@ -51,16 +59,28 @@ LEG_4 = [
 
 # ---------- Leg 5: (2, 2, -1.57) -> (1, 1, -0.78) ----------
 LEG_5 = [
+<<<<<<< HEAD
     (0.20, -0.21, 1.0),      # turn right 45 deg (face the diagonal)
     (0.32, 0.41, 2.83),    # forward 1.414 m
     (-0.21, 0.21, 2.0),      # turn left 90 deg (face -45 deg)
+=======
+    (0.2, -0.2, 1.0),      # turn right 45 deg (face the diagonal)
+    (0.32, 0.41, 2.83),    # forward 1.414 m
+    (-0.2, 0.2, 2.0),      # turn left 90 deg (face -45 deg)
+>>>>>>> 2bf71b513f409506dcb1415681831760c221b9c6
 ]
 
 # ---------- Leg 6: (1, 1, -0.78) -> (0, 0, 0) ----------
 LEG_6 = [
+<<<<<<< HEAD
     (0.2, -0.21, 1.0),      # turn right 90 deg (face the diagonal)
     (0.32, 0.41, 2.83),    # forward 1.414 m
     (-0.2, 0.21, 3.0),      # turn left 135 deg (face 0 deg)
+=======
+    (0.2, -0.2, 2.0),      # turn right 90 deg (face the diagonal)
+    (0.32, 0.41, 2.83),    # forward 1.414 m
+    (-0.2, 0.2, 3.0),      # turn left 135 deg (face 0 deg)
+>>>>>>> 2bf71b513f409506dcb1415681831760c221b9c6
 ]
 
 LEGS = [LEG_1, LEG_2, LEG_3, LEG_4, LEG_5, LEG_6]
