@@ -29,6 +29,7 @@ setup(
             'motor_control = robot_control.motor_control:main',
             'keyboard_control = robot_control.keyboard_control:main',
             'velocity_control = robot_control.velocity_control:main',
+            'cse276ahw1 = robot_control.cse276ahw1:main',
         ],
     },
 )
