@@ -69,7 +69,7 @@ class MotorControllerNode(Node):
         
         # safety timeout variables
         self.last_command_time = time.time()
-        self.timeout_duration = 0.15  # 0.15 second timeout
+        self.timeout_duration = 0.1  # 0.15 second timeout
         self.command_lock = threading.Lock()  # thread safety for command updates
         self.timeout_active = False  # flag to track if we're in timeout state
         

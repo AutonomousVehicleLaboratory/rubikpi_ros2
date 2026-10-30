@@ -1,0 +1,3 @@
+waypoint,goal_x,goal_y,goal_theta,est_x,est_y,est_theta,est_pos_err,est_theta_err,t
+
+distance_m,1.7620263953337787,rotation_rad,5.098889492006397

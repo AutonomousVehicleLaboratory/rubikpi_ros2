@@ -1,0 +1,63 @@
+# Parameters for hw2_navigator. Edit the tag map to match where you
+# actually placed the tags, measured with a tape measure.
+#
+# World frame: origin at the start position, +x = the robot's starting
+# heading, +y = 90 deg to its left. Angles in radians, CCW from +x.
+# tag_yaw = the direction the PRINTED FACE of the tag points
+# (e.g. a tag at (2, 0) facing back toward the origin has yaw pi).
+hw2_navigator:
+  ros__parameters:
+    # x, y, theta triples; the first one is the start pose
+    waypoints: [0.0, 0.0, 0.0,
+                1.0, 0.0, 0.0,
+                1.0, -2.0, 3.14159,
+                0.0, 0.0, 0.0]
+    # One entry per tag. Check the IDs printed on your tags.
+    #   tag 0: 1 m past WP1, facing back along -x
+    #   tag 1: <dist> past (1, 2) along +y, facing -y
+    #   tag 2: <dist> past (1, 2) along -x, facing +x
+    #   tag 3: <dist> behind the origin on the line from (1, 2), facing (1, 2)
+    # Defaults use <dist> = 0.5 m. Replace with your measured values.
+    tag_ids: [0, 5, 2, 1]
+    tag_x:   [2.0, 1.0, 0.0, -0.447]
+    tag_y:   [0.0, -3.0, -2.0, 0.894]
+    tag_yaw: [3.14159, 1.5708, 0.0, -1.107]
+    tag_size: 0.163          # edge of the BLACK square in meters (6.75 in)
+    tag_family: "36h11"
+
+    # Camera position relative to the robot's center of rotation (midpoint
+    # between the drive wheels), in meters. Measure these.
+    camera_offset_x: 0.10      # forward
+    camera_offset_y: 0.0      # left
+    image_is_rectified: false # true only if the camera node runs image_rectify:=true
+
+    # Motion, from HW1. drive_speed must match how fast drive_left/right
+    # actually go: time a 1 m run and set drive_speed = 1.0 / seconds.
+    drive_left: 0.32
+    drive_right: 0.40
+    drive_speed: 0.495
+    turn_cmd: 0.3
+    turn_rate: 2.051
+    turn_rate_left: 1.963
+    turn_rate_right: 2.138
+    search_cmd: 0.3
+    search_step: 0.35
+    use_imu: false
+    imu_yaw_sign: 1.0         # -1.0 if IMU yaw increases when turning right
+
+    # Control loop
+    step_time: 1.0            # n = 1 s of motion between photos
+    settle_time: 0.4
+    pos_tol: 0.05
+    ang_tol: 0.10
+    reach_radius: 0.151
+    min_step_time: 0.10
+    max_jump: 0.75
+    accept_jump_after: 4
+    heading_tol: 0.12
+    alpha_pos: 0.9
+    theta_trust_dist: 1.0
+    max_blind_steps: 1
+    max_steps_per_waypoint: 40
+    log_dir: "/home/ubuntu/hw2_logs"
+    pause_at_waypoints: true

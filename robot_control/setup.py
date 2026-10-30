@@ -10,7 +10,9 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', ['launch/robot_teleop_launch.py']),
+        ('share/' + package_name + '/launch', ['launch/robot_teleop_launch.py',
+                                               'launch/hw2_launch.py']),
+        ('share/' + package_name + '/config', ['config/hw2_params.yaml']),
     ],
     install_requires=[
         'setuptools',
@@ -29,7 +31,7 @@ setup(
             'motor_control = robot_control.motor_control:main',
             'keyboard_control = robot_control.keyboard_control:main',
             'velocity_control = robot_control.velocity_control:main',
-            'cse276ahw1 = robot_control.cse276ahw1:main',
+            'hw2_navigator = robot_control.hw2_navigator:main',
         ],
     },
 )
